@@ -1,48 +1,47 @@
 // Creating a function that generates the README file content
 function generateReadMe(informationFromUserInput) {
     return `
-        # ${informationFromUserInput.projectTitle.trim()}
+# ${informationFromUserInput.projectTitle.trim()}
 
-        ## Description
+## Description
 
-        ${informationFromUserInput.description}
+${informationFromUserInput.description}
 
-        ## Table of Contents
-        - [Installation](#installation)
-        - [Usage](#usage)
-        - [License](#license)
-        - [Contributing](#contributing)
-        - [Tests](#test)
-        - [Questions](#questions)
+## 📖Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [License](#license)
+4. [Contributing](#contributing)
+5. [Tests](#test)
+6. [Questions](#questions)
 
-        ## Installation
+## Installation
 
-        ${informationFromUserInput.installation}
-        
-        ## Usage
+${informationFromUserInput.installation}
 
-        ${informationFromUserInput.usage}
-        
-        ## License
+## Usage
 
-        Copyright © ${informationFromUserInput.projectYear.trim()} ${informationFromUserInput.username.trim()}.
+${informationFromUserInput.usage}
 
-        Released under ${informationFromUserInput.license}. Refer to the LICENSE file for details.
+## License
 
-        ## Contributing
+Copyright © ${informationFromUserInput.projectYear.trim()} [${informationFromUserInput.username.trim()}.]((https://github.com/${informationFromUserInput.githubProfile}))\n
+Released under ${informationFromUserInput.license}. Refer to the [LICENSE](./LICENSE) file for details.
 
-        ${informationFromUserInput.contributing}
+## Contributing
 
-        ## Tests
+${informationFromUserInput.contributing}
 
-        ${informationFromUserInput.tests}
+## Tests
 
-        ## Questions
+${informationFromUserInput.tests}
 
-        For any questions, please contact the author through:
-        
-        Github: ${informationFromUserInput.githubProfile} 
-        Email: ${informationFromUserInput.email}
+## Questions
+
+For any questions, please contact the author:
+
+Github: [${informationFromUserInput.githubProfile}](https://github.com/${informationFromUserInput.githubProfile})\n 
+Email: ${informationFromUserInput.email}
     `
 }
 
