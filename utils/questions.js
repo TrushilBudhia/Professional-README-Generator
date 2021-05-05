@@ -1,5 +1,10 @@
 const inquirer = require('inquirer');
 
+// Function to validate user input is not an empty string
+const answerValidator = async (input) => {
+    return (input === '' ? 'Invalid value' : true);
+}
+
 // Function prompting user to answer questions for creating the README.md file
 function promptInquirer() {
     return inquirer
@@ -23,22 +28,19 @@ function promptInquirer() {
             type: 'editor',
             message: 'Please provide a description for the project:',
             name: 'description',
-            validate: (value) => {
-                if(value === ''){
-                    return 'Please enter valid description'
-                }
-                return true
-            }
+            validate: answerValidator,
         },
         {
             type: 'editor',
             message: 'Please provide installation instructions:',
             name: 'installation',
+            validate: answerValidator,
         },
         {
             type: 'editor',
             message: 'Please provide usage information:',
             name: 'usage',
+            validate: answerValidator,
         },
         {
             type: 'list',
@@ -85,11 +87,13 @@ function promptInquirer() {
             type: 'input',
             message: 'What year is the project being released in?',
             name: 'projectYear',
+            validate: answerValidator,
         },
         {
             type: 'input',
             message: 'Please provide information surrounding contributions:',
             name: 'contributing',
+            validate: answerValidator,
         },
         {
             type: 'input',
@@ -100,6 +104,7 @@ function promptInquirer() {
             type: 'input',
             message: 'Please provide an email address further questions can be directed to:',
             name: 'email',
+            validate: answerValidator,
         },
     ])
 }
