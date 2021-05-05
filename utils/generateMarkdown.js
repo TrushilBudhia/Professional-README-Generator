@@ -16,7 +16,7 @@ ${informationFromUserInput.description}
 2. [Usage](#usage)
 3. [License](#license)
 4. [Contributing](#contributing)
-5. [Tests](#test)
+5. [Tests](#tests)
 6. [Questions](#questions)
 
 ## Installation
