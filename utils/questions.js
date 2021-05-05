@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 
+// Function prompting user to answer questions for creating the README.md file
 function promptInquirer() {
     return inquirer
     .prompt([
@@ -19,17 +20,23 @@ function promptInquirer() {
             name: 'projectTitle',
         },
         {
-            type: 'input',
+            type: 'editor',
             message: 'Please provide a description for the project:',
             name: 'description',
+            validate: (value) => {
+                if(value === ''){
+                    return 'Please enter valid description'
+                }
+                return true
+            }
         },
         {
-            type: 'input',
+            type: 'editor',
             message: 'Please provide installation instructions:',
             name: 'installation',
         },
         {
-            type: 'input',
+            type: 'editor',
             message: 'Please provide usage information:',
             name: 'usage',
         },
@@ -91,7 +98,7 @@ function promptInquirer() {
         },
         {
             type: 'input',
-            message: 'Please provide an email address further questions for this project can be directed to:',
+            message: 'Please provide an email address further questions can be directed to:',
             name: 'email',
         },
     ])

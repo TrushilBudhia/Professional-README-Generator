@@ -1,7 +1,11 @@
+const licenseBadge = require('./createLicenseBadge.js');
+
 // Creating a function that generates the README file content
-function generateReadMe(informationFromUserInput) {
+function generateMarkdown(informationFromUserInput) {
     return `
 # ${informationFromUserInput.projectTitle.trim()}
+
+${licenseBadge.createLicenseBadge(informationFromUserInput.license)}
 
 ## Description
 
@@ -47,5 +51,5 @@ Email: ${informationFromUserInput.email}
 
 // Exporting the function
 module.exports = {
-    generateReadMe: generateReadMe
+    generateMarkdown
 }
