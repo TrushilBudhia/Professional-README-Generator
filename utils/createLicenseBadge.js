@@ -36,7 +36,7 @@ function createLicenseBadge(licenseSelected) {
             value = `[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)\n`;
             break;
         case 'Do What The F*ck You Want To Public License':
-            value = `[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)\n`;
+            value = `[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-green.svg)](http://www.wtfpl.net/about/)\n`;
             break;
         case 'Educational Community License v2.0':
             value = `[![License: ECL v2](https://img.shields.io/badge/License-ECL%202.0-red.svg)](https://opensource.org/licenses/ECL-2.0)\n`;
